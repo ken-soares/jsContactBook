@@ -1,0 +1,160 @@
+:root{
+	--gray:#665c54;
+	--dark: #282828;
+	--darker:#32302f;
+	--darkest:#1d2021;
+	--light:#fbf1c7;
+	--yellow: #fabd2f;
+	--orange:#fe8019;
+	--blue: #458588;
+}
+
+*{
+	box-sizing: border-box;
+	margin:0;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+	display:flex;
+	flex-direction:column;
+	min-height:100vh;
+	background:var(--dark);
+}
+
+header{
+	padding:2rem 1rem;
+	max-width: 800px;
+	width:100%;
+	margin:0 auto;
+}
+
+header h1{
+	font-size:2.5rem;
+	font-weight:300;
+	margin-bottom:1rem;
+	color:var(--gray);
+	text-align:center;
+}
+
+#form{
+	display:flex;
+}
+
+input,button{
+	appearance:none;
+	border:none;
+	outline:none;
+	background:none;
+}
+
+#name-input,#number-input{
+	flex:1 1 0%;
+	background:var(--darker);
+	padding:1rem;
+	border-radius:1rem;
+	margin-right:1rem;
+	color: var(--light);
+	font-size:1.25rem;
+}
+
+#name-input::placeholder{
+	color:var(--gray);
+}
+#number-input::placeholder{
+	color:var(--gray);
+}
+
+#new-contact-submit{
+	color:var(--yellow);
+	font-size:1.25rem;
+	font-weight:700;
+	background-image:linear-gradient(to right,var(--yellow),var(--orange));
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	cursor:pointer;
+	transition:0.4s;
+}
+
+#new-contact-submit:hover{
+	opacity:0.8;
+}
+
+#new-contact-submit:active{
+	opacity:0.6;
+}
+
+main{
+	flex: 1 1 0%;
+	max-width:800px;
+	width:100%;
+	margin: 0 auto;
+}
+
+.contact-list{
+	padding:1rem;
+}
+
+.contact-list h2{
+	font-size:1.5rem;
+	font-weight:300;
+	color:var(--gray);
+	margin-bottom:1rem;
+}
+
+.contacts .contact{
+	display:flex;
+	justify-content:space-between;
+	background-color:var(--darkest);
+	padding:1rem;
+	border-radius:1rem;
+	margin-bottom:1rem;
+}
+
+.contacts .contact {
+	flex: 1 1 0%;
+}
+
+.contacts .contact .text{
+	color:var(--light);
+	font-size:1.125rem;
+	width:100%;
+	display:block;
+	transition:0.4s;
+}
+
+.contacts .contact .text:not(:read-only){
+	color:var(--blue);
+}
+
+.contacts .contact {
+	display:flex;
+	margin:0 -0.5rem;
+}
+
+.contact button{
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size:1.125rem;
+	font-weight:700;
+	text-transform:uppercase;
+	transition:0.4s;
+}
+
+.contact button:hover{
+	opacity:0.8;
+}
+
+.contact button:active{
+	opacity:0.6;
+}
+
+.contact .edit{
+	background-image:linear-gradient(to right,var(--yellow),var(--orange));
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+}
+
+.contact .delete{
+	color:crimson;
+}
